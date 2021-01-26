@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <import resource="classpath:applicationContext_dao.xml"/>
+    <!--指定所有的Service的实现类的位置,让Spring去创建这些对象-->
+    <context:component-scan base-package="com.wuxin.service"/>
+    <!--添加事务管理器,MyBatis框架使用datasource.DataSourceTransactionManager来进行事务处理
+       它会自动调用MyBatis框架的sqlSession.commit()和sqlSession.rollback();
+       它会根据我们对事务的设定来决定提交和回滚
+       设定传播特性，设定数据库的隔离级别，设定异常回滚，设定非回滚异常，设定超时时间
+   -->
+   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+       <property name="dataSource" ref="dataSourse"></property>
+   </bean>
+
+
+    <!--添加事务的注解实现-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+</beans>

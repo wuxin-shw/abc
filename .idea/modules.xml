@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springmybatis合并/spring-mybatis合并.iml" filepath="$PROJECT_DIR$/springmybatis合并/spring-mybatis合并.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springMVC/springmvc_001.iml" filepath="$PROJECT_DIR$/springMVC/springmvc_001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wuxinSSM/wuxinSSM.iml" filepath="$PROJECT_DIR$/wuxinSSM/wuxinSSM.iml" />
+    </modules>
+  </component>
+</project>

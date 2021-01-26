@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wuxinSSM:war">
+    <output-path>$PROJECT_DIR$/wuxinSSM/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>wuxinSSM</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="wuxinSSM-1.0.war">
+      <element id="artifact" artifact-name="wuxinSSM:war exploded" />
+    </root>
+  </artifact>
+</component>
